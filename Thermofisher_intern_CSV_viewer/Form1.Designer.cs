@@ -47,6 +47,7 @@
             this.radioButtonSemicolon = new System.Windows.Forms.RadioButton();
             this.radioButtonComma = new System.Windows.Forms.RadioButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.buttonReset = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCSV)).BeginInit();
             this.groupBoxDelimiter.SuspendLayout();
@@ -59,7 +60,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(10, 10);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1590, 45);
+            this.menuStrip1.Size = new System.Drawing.Size(1152, 45);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,7 +144,7 @@
             this.dataGridViewCSV.RowTemplate.DividerHeight = 1;
             this.dataGridViewCSV.RowTemplate.Height = 45;
             this.dataGridViewCSV.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCSV.Size = new System.Drawing.Size(1566, 725);
+            this.dataGridViewCSV.Size = new System.Drawing.Size(1128, 553);
             this.dataGridViewCSV.TabIndex = 1;
             this.dataGridViewCSV.DragDrop += new System.Windows.Forms.DragEventHandler(this.dataGridViewCSV_DragDrop);
             this.dataGridViewCSV.DragEnter += new System.Windows.Forms.DragEventHandler(this.dataGridViewCSV_DragEnter);
@@ -157,8 +158,6 @@
             // 
             // textBoxPath
             // 
-            this.textBoxPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPath.Enabled = false;
             this.textBoxPath.Location = new System.Drawing.Point(153, 197);
             this.textBoxPath.Name = "textBoxPath";
@@ -211,12 +210,24 @@
             this.radioButtonComma.UseVisualStyleBackColor = true;
             this.radioButtonComma.CheckedChanged += new System.EventHandler(this.radioButtonComma_CheckedChanged);
             // 
+            // buttonReset
+            // 
+            this.buttonReset.Location = new System.Drawing.Point(481, 86);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Padding = new System.Windows.Forms.Padding(10);
+            this.buttonReset.Size = new System.Drawing.Size(293, 105);
+            this.buttonReset.TabIndex = 8;
+            this.buttonReset.Text = "Clear table";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1610, 993);
+            this.ClientSize = new System.Drawing.Size(1172, 821);
+            this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.groupBoxDelimiter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPath);
@@ -224,7 +235,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(900, 600);
+            this.MinimumSize = new System.Drawing.Size(1200, 900);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = " CSV Editor";
@@ -255,5 +266,6 @@
         private RadioButton radioButtonSemicolon;
         private RadioButton radioButtonComma;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button buttonReset;
     }
 }

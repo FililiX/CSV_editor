@@ -182,5 +182,10 @@ namespace Thermofisher_intern_CSV_viewer
         {
             _delimiter = ";";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridViewCSV.DataSource = null;
+        }
     }
 }
